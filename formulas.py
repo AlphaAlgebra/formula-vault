@@ -20,3 +20,14 @@ def calculate_distance(x1, y1, x2, y2):
     """Calculates the distance between two points."""
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
+def calculate_quadratic(a, b, c):
+    """Solves for x in ax^2 + bx + c = 0."""
+    import math
+    discriminant = b**2 - 4*a*c
+    
+    if discriminant < 0:
+        return "No real roots"
+    
+    x1 = (-b + math.sqrt(discriminant)) / (2*a)
+    x2 = (-b - math.sqrt(discriminant)) / (2*a)
+    return round(x1, 2), round(x2, 2)
