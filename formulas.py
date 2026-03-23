@@ -1,3 +1,4 @@
+import math
 
 def calculate_slope(x1, y1, x2, y2):
     """Calculates the slope (m) between two points."""
@@ -13,3 +14,9 @@ def calculate_midpoint(x1, y1, x2, y2):
     xm = (x1 + x2) / 2
     ym = (y1 + y2) / 2
     return (xm, ym)
+
+
+def calculate_distance(x1, y1, x2, y2):
+    """Calculates the distance between two points."""
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
